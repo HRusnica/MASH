@@ -1,0 +1,49 @@
+﻿@using MASH.Models;
+
+@model List<Theme>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Please select a theme for your MASH game:</h2>
+
+<div id="formBox" class="box">
+    @*<form action="mashUp">*@
+    @using (Html.BeginForm("MashUp", "Home", FormMethod.Get))
+    {
+
+                foreach (var idea in Model)
+                {
+                    <input type="radio"
+                           name="themeSelection"
+                           id="@idea.MashTheme"
+                           value="@idea.MashTheme" />
+                    <label for="@idea.MashTheme">@idea.MashTheme</label><br />
+                }
+                <input type="radio"
+                       name="themeSelection"
+                       id="custom"
+                       value="custom"
+                       checked />
+                <label for="custom">Create Your Own</label><br />
+
+                <p>I want to marry a: </p>
+      
+        <input type="radio"
+               name="isGirl"
+               id="girl"
+               value=1
+               checked />
+                    <label for="girl">beautiful woman</label>
+                    <input type="radio"
+                           name="isGirl"
+                           id="boy"
+                           value=0 />
+                    <label for="boy">handsome man</label><br />
+
+                <input type="submit" value="Submit" />
+    }
+      
+    </div>
+

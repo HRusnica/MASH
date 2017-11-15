@@ -1,0 +1,45 @@
+﻿@using MASH.Models
+
+@model List<FutureGroup>
+
+@{
+    ViewBag.Title = "FindFuture";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+@foreach (FutureGroup choice in Model)
+{
+    <div id=@choice.Type class="box">
+        <h2> @choice.Type</h2><br />
+        <h4> @choice.Item1</h4>
+        <h4> @choice.Item2</h4>
+        <h4> @choice.Item3</h4>
+        <h4> @choice.Item4</h4>
+    </div>
+}
+@using (Html.BeginForm("Calculate", "Home", FormMethod.Get))
+{
+
+<div id="number" class="box">
+    <h2> Pick a number to calculate your future. </h2><br />
+    <label for="numberDropDown">Pick a Number</label>
+    <select name="iterator" id="iterator" required>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+    
+    <input type="submit" value="See Your Future" style="border-radius: 7px; border: 2px solid #000000;" />
+
+</div>
+}
+    </div>
+

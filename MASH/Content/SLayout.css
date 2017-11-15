@@ -1,0 +1,71 @@
+﻿body {
+    background-color: lightblue;
+    font-family: 'Amatic SC', cursive;
+    color: purple;
+}
+    h1 {
+    font-family: 'Luckiest Guy', cursive;
+    color: darkgreen;
+    font-size: 3em;
+}
+    h2{
+       text-align:center;
+    }
+
+    .heading {
+        text-align: center;
+    }
+.main {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: auto;
+    grid-template-areas: "Mate Job Transportation" "Pet Kids House" ". Number .";
+    grid-column-gap: 1em;
+}
+
+.box {
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 20px;
+    text-align: center;
+}
+
+#Mate{
+    background-color: aqua;
+    grid-area: Mate;
+}
+
+#Job {
+    background-color: aquamarine;
+    grid-area: Job;
+}
+
+#Transportation {
+    background-color: mediumaquamarine;
+    grid-area: Transportation;
+}
+
+#Pet {
+    background-color: aqua;
+    grid-area: Pet;
+}
+
+#Kids {
+    background-color: aquamarine;
+    grid-area: Kids;
+}
+
+#House, #house {
+    background-color: mediumaquamarine;
+    grid-area: House;
+}
+
+#number {
+    background-color: aquamarine;
+    grid-area: Number;
+}
+
+#formBox {
+    align-content: center;
+    background-color: mediumaquamarine;
+}
