@@ -1,10 +1,14 @@
-﻿
+﻿@using MASH.Models;
+
+@model List<Theme>
 @{
     ViewBag.Title = "MashUp";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+@*<form action="mashUp">*@
+@using (Html.BeginForm("Calculate", "Home", FormMethod.Get))
+{
 <div class="main">
     <div id="Mate" class="box">
         <form id="mateForm">
@@ -83,8 +87,8 @@
             </select>
 
             <input type="submit" value="See Your Future" style="border-radius: 7px; border: 2px solid #000000;" />
-        </form>
         </div>
     </div>
+}
 
 

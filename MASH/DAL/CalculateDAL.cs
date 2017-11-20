@@ -9,7 +9,8 @@ namespace MASH.DAL
     {
         public string GetPrediction(int iterator)
         {
-            throw new NotImplementedException();
+            string prediction = "You will live a long life" + iterator;
+            return prediction;
         }
     }
 }
